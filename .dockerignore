@@ -1,0 +1,7 @@
+**/bin
+**/obj
+.git
+Shared/Variables/.env*
+!Shared/Variables/.env.example
+.notes
+*.log

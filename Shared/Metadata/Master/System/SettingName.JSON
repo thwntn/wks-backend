@@ -1,0 +1,7 @@
+[
+  {
+    "enum": 5,
+    "name": "DEFAULT_PERMISSION",
+    "description": "Quyền mặc định khi tạo tài khoản."
+  }
+]

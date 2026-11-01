@@ -1,0 +1,12 @@
+[
+  {
+    "enum": 0,
+    "name": "Gian hàng",
+    "description": "Tên miền dùng cho cửa hàng và trải nghiệm mua sắm của khách."
+  },
+  {
+    "enum": 1,
+    "name": "Chuyển hướng",
+    "description": "Tên miền dùng cho liên kết rút gọn và chiến dịch chuyển hướng."
+  }
+]

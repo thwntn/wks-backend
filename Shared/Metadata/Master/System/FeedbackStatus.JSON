@@ -1,0 +1,30 @@
+[
+  {
+    "enum": 0,
+    "name": "Khởi tạo",
+    "description": "Phản hồi vừa được tạo và chờ xử lý",
+    "color": "#454f5b",
+    "backgroundColor": "#d9dbde"
+  },
+  {
+    "enum": 1,
+    "name": "Đã đọc",
+    "description": "Phản hồi đã được nhân viên tiếp nhận và xem nội dung",
+    "color": "#359eff",
+    "backgroundColor": "#2c6bff13"
+  },
+  {
+    "enum": 2,
+    "name": "Đang xử lý",
+    "description": "Phản hồi đang được xử lý hoặc phản hồi bởi hệ thống",
+    "color": "#ffab00",
+    "backgroundColor": "#fff4d6"
+  },
+  {
+    "enum": 3,
+    "name": "Hoàn tất",
+    "description": "Phản hồi đã được xử lý hoàn tất",
+    "color": "#118d57",
+    "backgroundColor": "#cfe8dd"
+  }
+]

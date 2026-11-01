@@ -1,0 +1,14 @@
+[
+  {
+    "enum": 1,
+    "name": "Không xác định"
+  },
+  {
+    "enum": 2,
+    "name": "Nam"
+  },
+  {
+    "enum": 3,
+    "name": "Nữ"
+  }
+]

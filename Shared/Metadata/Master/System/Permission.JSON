@@ -1,0 +1,8 @@
+[
+  {
+    "enum": "ADMIN_SETTING",
+    "name": "Quản trị cài đặt",
+    "description": "Quyền chỉnh sửa cấu hình hệ thống",
+    "group": "admin"
+  }
+]
