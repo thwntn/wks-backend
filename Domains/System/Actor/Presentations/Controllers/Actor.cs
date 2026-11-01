@@ -26,7 +26,7 @@ public class ActorController(
     /// Summary:
     ///     Creates a new sub-account under the authenticated parent account.
     ///
-    [Permission(nameof(PermissionConstant.ACTOR)), HttpPost]
+    [Permission(nameof(PermissionConstant.AUTH_ACTOR)), HttpPost]
     public async Task<IActionResult> Create(
         [FromBody] ActorDataTransformer.Create body
     )
@@ -46,7 +46,7 @@ public class ActorController(
     /// Summary:
     ///     Lists the sub-accounts owned by the authenticated parent account.
     ///
-    [Permission(nameof(PermissionConstant.ACTOR)), HttpGet]
+    [Permission(nameof(PermissionConstant.AUTH_ACTOR)), HttpGet]
     public async Task<IActionResult> List(
         [FromQuery] QueryOptions queryOptions
     )
@@ -63,7 +63,7 @@ public class ActorController(
     /// Summary:
     ///     Updates an owned sub-account profile.
     ///
-    [Permission(nameof(PermissionConstant.ACTOR)), HttpPatch(RouteConstant.ID)]
+    [Permission(nameof(PermissionConstant.AUTH_ACTOR)), HttpPatch(RouteConstant.ID)]
     public async Task<IActionResult> Update(
         [FromRoute] Guid id,
         [FromBody] ActorDataTransformer.Update body
@@ -86,7 +86,7 @@ public class ActorController(
     ///     Toggles the lock status of an owned sub-account.
     ///
     [
-        Permission(nameof(PermissionConstant.ACTOR)),
+        Permission(nameof(PermissionConstant.AUTH_ACTOR)),
         HttpPost(RouteConstant.ACTOR_STATUS)
     ]
     public async Task<IActionResult> Status([FromRoute] Guid id)
@@ -104,7 +104,7 @@ public class ActorController(
     ///     Lists the roles granted to an owned sub-account.
     ///
     [
-        Permission(nameof(PermissionConstant.ACTOR)),
+        Permission(nameof(PermissionConstant.AUTH_ACTOR)),
         HttpGet(RouteConstant.ACTOR_ROLE_LIST)
     ]
     public async Task<IActionResult> ListRole([FromRoute] Guid id)
@@ -119,7 +119,7 @@ public class ActorController(
     ///     Grants a new role with permissions to an owned sub-account.
     ///
     [
-        Permission(nameof(PermissionConstant.ACTOR)),
+        Permission(nameof(PermissionConstant.AUTH_ACTOR)),
         HttpPost(RouteConstant.ACTOR_ROLE_CREATE)
     ]
     public async Task<IActionResult> CreateRole(
@@ -144,7 +144,7 @@ public class ActorController(
     ///     Updates a role granted to an owned sub-account.
     ///
     [
-        Permission(nameof(PermissionConstant.ACTOR)),
+        Permission(nameof(PermissionConstant.AUTH_ACTOR)),
         HttpPatch(RouteConstant.ACTOR_ROLE_UPDATE)
     ]
     public async Task<IActionResult> UpdateRole(
@@ -169,7 +169,7 @@ public class ActorController(
     ///     Removes a role granted to an owned sub-account.
     ///
     [
-        Permission(nameof(PermissionConstant.ACTOR)),
+        Permission(nameof(PermissionConstant.AUTH_ACTOR)),
         HttpDelete(RouteConstant.ACTOR_ROLE_REMOVE)
     ]
     public async Task<IActionResult> RemoveRole([FromRoute] Guid roleId)
@@ -187,7 +187,7 @@ public class ActorController(
     ///     Lists the master permission definitions available for actor roles.
     ///
     [
-        Permission(nameof(PermissionConstant.ACTOR)),
+        Permission(nameof(PermissionConstant.AUTH_ACTOR)),
         HttpGet(RouteConstant.ACTOR_ROLE_PERMISSIONS)
     ]
     public async Task<IActionResult> Permissions()

@@ -28,5 +28,11 @@
     "name": "Tổng quan",
     "description": "Xem trang tổng quan chính",
     "group": "navigation"
+  },
+  {
+    "enum": "AUTH_ACTOR",
+    "name": "Tài khoản liên kết",
+    "description": "Quản lý tài khoản liên kết và phân quyền cho tài khoản liên kết",
+    "group": "navigation"
   }
 ]

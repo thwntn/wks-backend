@@ -11,7 +11,7 @@ public enum PermissionConstant
     /// Summary:
     ///     Allows access to actor account and actor role management.
     ///
-    ACTOR,
+    AUTH_ACTOR,
     ///
     /// Summary:
     ///     Allows platform administration, including profiles, roles, settings, domains and versions.
