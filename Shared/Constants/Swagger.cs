@@ -181,4 +181,7 @@ public class SwaggerConstant
     ///     and aggregated statistics across different modules for quick insights.
     ///
     public const string HOME_FINANCIAL = "home: financial";
+
+    /// <summary>Financial transaction description generation.</summary>
+    public const string INTELLIGENCE_TEXT = "intelligence: text";
 }

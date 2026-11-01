@@ -4,7 +4,7 @@ Base ASP.NET Core / .NET 10 backend extracted from ECMC. Source namespaces use `
 
 ## Retained
 
-Financial is migrated from ECMC: timelines, expenses, transactions, cash, reports, analytics and home dashboard. Shared hashtag support is included.
+Financial is migrated from ECMC: timelines, expenses, transactions, cash, reports, analytics and home dashboard. Shared hashtag support and AI-assisted transaction descriptions are included. Configure the Intelligence provider variables to use text generation.
 
 - Accounts, password/Google authentication, verification codes, JWT, refresh tokens, cookies and sessions.
 - Profiles, actor accounts, roles, permission policies and platform administration.
@@ -57,3 +57,7 @@ dotnet ef migrations has-pending-model-changes
 ```
 
 `WithConsumer`, `WithSocket` and `WithJob` control consumer, socket subscriber and Hangfire behavior. Base consumers provision accounts and record audit actions; no application recurring jobs are scheduled. API and workers should use WKS-specific queues/channels/databases when deployed alongside ECMC.
+
+## Moving existing Financial data
+
+The repository migration moves code and schema definitions; no database data is copied automatically. Before applying `MoveFinancialToWks` to an ECMC database, populate a separate WKS database and migrate/validate the corresponding account/profile identities, the hashtags used by financial timelines, and `Cash`, `CashDescription`, `Timeline`, `TimelineTag`, `Expense`, `ExpenseTransaction` records. Preserve identifiers and foreign keys. Validate the transferred records before applying the ECMC migration, which drops those six source tables. `AddFinancial` creates the target tables and default Financial permissions in WKS.

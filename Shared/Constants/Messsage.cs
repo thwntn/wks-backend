@@ -40,6 +40,9 @@ public class ErrorCodeConstant
 ///
 public class MessageConstant
 {
+    /// <summary>Requested text template is unavailable in the WKS Financial application.</summary>
+    public const string UNSUPPORTED_FINANCIAL_TEMPLATE = "Mẫu tạo mô tả không thuộc ứng dụng Tài chính.";
+
     public const string ORDER_ISSUE_WAREHOUSE_AMBIGUOUS =
         "Không tìm thấy một kho xuất duy nhất cho cửa hàng online thuộc vùng của đơn hàng.";
     public const string ORDER_ISSUE_SKU_AMBIGUOUS =

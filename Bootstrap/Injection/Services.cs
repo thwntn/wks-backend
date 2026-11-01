@@ -353,5 +353,10 @@ public class Services
             RecentTransactionHomeFinancial
         >();
 
+        /// Summary: Shared text provider and Financial description template generation.
+        services.AddScoped<IGenerateTextIntelligent, GenerateTextIntelligent>();
+        services.AddScoped<ITemplateIntelligence, TemplateIntelligence>();
+        services.AddScoped<ITemplateGenerateIntelligence, TemplateGenerateIntelligence>();
+
     }
 }
