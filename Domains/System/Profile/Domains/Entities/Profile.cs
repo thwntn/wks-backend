@@ -324,5 +324,16 @@ public class Profile(string name, string email, string description)
     ///     The reusable content templates for this profile's broadcast campaigns.
     ///
 
+    ///
+    /// Summary:
+    ///     Gets or sets the collection of expense transactions for this profile.
+    ///
+    /// Returns:
+    ///     The expense transaction records owned by this profile.
+    ///
+    public ICollection<ExpenseTransaction> ExpenseTransactions { get; set; }
+
+    /// <summary>Hashtags used to classify this profile's financial timelines.</summary>
+    public ICollection<Hashtag> Tags { get; set; }
     #endregion
 }

@@ -392,4 +392,403 @@ public class RouteConstant
     ///     Lists permission definitions available for actor roles.
     ///
     public const string ACTOR_ROLE_PERMISSIONS = "permissions";
+
+    ///
+    /// Summary:
+    ///     Tag management services
+    ///     Feature: (Tag creation, filtering, and categorization)
+    ///     -> Provides capabilities to manage tags across the platform,
+    ///     supporting flexible filtering and categorization for organizing
+    ///     and querying resources efficiently.
+    ///
+    public const string HASHTAG = "system/hashtags";
+
+    ///
+    /// Summary:
+    ///     Tag management services
+    ///     Feature: (Tag creation, filtering, and categorization)
+    ///     -> Provides capabilities to manage tags across the platform,
+    ///     supporting flexible filtering and categorization for organizing
+    ///     and querying resources efficiently.
+    ///
+    public const string HASHTAG_FILTER = "filter/{filter}";
+
+    ///
+    /// Summary:
+    ///     Cash management services
+    ///     Feature: (Cash tracking, categorization, and description handling)
+    ///     -> Provides capabilities to manage cash records, organize cash-related
+    ///     descriptions, and support structured tracking of cash flows
+    ///     for financial monitoring and reporting.
+    ///
+    public const string CASH = "financial/cash";
+
+    ///
+    /// Summary:
+    ///     Cash management services
+    ///     Feature: (Cash tracking, categorization, and description handling)
+    ///     -> Provides capabilities to manage cash records, organize cash-related
+    ///     descriptions, and support structured tracking of cash flows
+    ///     for financial monitoring and reporting.
+    ///
+    public const string CASH_DESCRIPTION = "financial/cash-descriptions";
+
+    ///
+    /// Summary:
+    ///     Cash management services
+    ///     Feature: (Cash tracking, categorization, and description handling)
+    ///     -> Provides capabilities to manage cash records, organize cash-related
+    ///     descriptions, and support structured tracking of cash flows
+    ///     for financial monitoring and reporting.
+    ///
+    public const string FINANCIAL_ANALYTICS = "financial/analytics";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE = "financial/timelines";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_CLONE = "{id}/clone";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_HASHTAG = "hashtag/{id}";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_PIN = "{id}/pin";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_UNPIN = "{id}/unpin";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_CHART = "chart";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_GET_EXPENSE = "{id}/expenses";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_RECENT = "recent";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_PERIOD = "period";
+
+    ///
+    /// Summary:
+    ///     Timeline management services
+    ///     Feature: (Timeline tracking, cloning, and pinning management)
+    ///     -> Provides capabilities to manage timeline records, including
+    ///     cloning existing entries, highlighting important items through
+    ///     pinning, and organizing timeline data for tracking and analytics.
+    ///
+    public const string TIMELINE_CASHFLOW = "cashflow";
+
+    ///
+    /// Summary:
+    ///     Financial transaction and expenditure management services
+    ///     Feature: (Expense tracking, statistics, auto-generation, and financial analytics)
+    ///     -> Provides capabilities to manage financial transactions, generate
+    ///     expenditure statistics, auto-create expense records from timelines,
+    ///     organize transactions with categories, track financial counters,
+    ///     and analyze expenditure data for financial monitoring and reporting.
+    ///
+    public const string FINANCIAL_TRANSACTION = "financial/transactions";
+
+    ///
+    /// Summary:
+    ///     Financial transaction and expenditure management services
+    ///     Feature: (Expense tracking, statistics, auto-generation, and financial analytics)
+    ///     -> Provides capabilities to manage financial transactions, generate
+    ///     expenditure statistics, auto-create expense records from timelines,
+    ///     organize transactions with categories, track financial counters,
+    ///     and analyze expenditure data for financial monitoring and reporting.
+    ///
+    public const string FINANCIAL_TRANSACTION_STATISTIC = "statistic";
+
+    ///
+    /// Summary:
+    ///     Financial transaction and expenditure management services
+    ///     Feature: (Expense tracking, statistics, auto-generation, and financial analytics)
+    ///     -> Provides capabilities to manage financial transactions, generate
+    ///     expenditure statistics, auto-create expense records from timelines,
+    ///     organize transactions with categories, track financial counters,
+    ///     and analyze expenditure data for financial monitoring and reporting.
+    ///
+    public const string FINANCIAL_TRANSACTION_COUNTER = "counter/{id}";
+
+    ///
+    /// Summary:
+    ///     Financial transaction and expenditure management services
+    ///     Feature: (Expense tracking, statistics, auto-generation, and financial analytics)
+    ///     -> Provides capabilities to manage financial transactions, generate
+    ///     expenditure statistics, auto-create expense records from timelines,
+    ///     organize transactions with categories, track financial counters,
+    ///     and analyze expenditure data for financial monitoring and reporting.
+    ///
+    public const string FINANCIAL_TRANSACTION_CATEGORY = "with-categories";
+
+    ///
+    /// Summary:
+    ///     Financial transaction and expenditure management services
+    ///     Feature: (Expense tracking, statistics, auto-generation, and financial analytics)
+    ///     -> Provides capabilities to manage financial transactions, generate
+    ///     expenditure statistics, auto-create expense records from timelines,
+    ///     organize transactions with categories, track financial counters,
+    ///     and analyze expenditure data for financial monitoring and reporting.
+    ///
+    public const string FINANCIAL_TRANSACTION_EXPENDITURE = "expenditure";
+
+    ///
+    /// Summary:
+    ///     Expense management and automation services
+    ///     Feature: (Expense tracking, pinning, auto-generation, filtering, and suggestions)
+    ///     -> Provides capabilities to manage expense records, highlight important entries
+    ///     through pinning, automatically generate expenses from timelines, apply filters,
+    ///     and suggest related or optimized expense data for better financial tracking.
+    ///
+    public const string EXPENSE = "financial/expenses";
+
+    ///
+    /// Summary:
+    ///     Expense management and automation services
+    ///     Feature: (Expense tracking, pinning, auto-generation, filtering, and suggestions)
+    ///     -> Provides capabilities to manage expense records, highlight important entries
+    ///     through pinning, automatically generate expenses from timelines, apply filters,
+    ///     and suggest related or optimized expense data for better financial tracking.
+    ///
+    public const string EXPENSE_PIN = "{id}/pin";
+
+    ///
+    /// Summary:
+    ///     Expense management and automation services
+    ///     Feature: (Expense tracking, pinning, auto-generation, filtering, and suggestions)
+    ///     -> Provides capabilities to manage expense records, highlight important entries
+    ///     through pinning, automatically generate expenses from timelines, apply filters,
+    ///     and suggest related or optimized expense data for better financial tracking.
+    ///
+    public const string EXPENSE_UNPIN = "{id}/unpin";
+
+    ///
+    /// Summary:
+    ///     Expense management and automation services
+    ///     Feature: (Expense tracking, pinning, auto-generation, filtering, and suggestions)
+    ///     -> Provides capabilities to manage expense records, highlight important entries
+    ///     through pinning, automatically generate expenses from timelines, apply filters,
+    ///     and suggest related or optimized expense data for better financial tracking.
+    ///
+    public const string EXPENSE_FILTER = "filter";
+
+    ///
+    /// Summary:
+    ///     Expense management and automation services
+    ///     Feature: (Expense tracking, pinning, auto-generation, filtering, and suggestions)
+    ///     -> Provides capabilities to manage expense records, highlight important entries
+    ///     through pinning, automatically generate expenses from timelines, apply filters,
+    ///     and suggest related or optimized expense data for better financial tracking.
+    ///
+    public const string EXPENSE_SUGGEST = "{id}/suggest";
+
+    ///
+    /// Summary:
+    ///     Expense management and automation services
+    ///     Feature: (Expense tracking, pinning, auto-generation, filtering, and suggestions)
+    ///     -> Provides capabilities to manage expense records, highlight important entries
+    ///     through pinning, automatically generate expenses from timelines, apply filters,
+    ///     and suggest related or optimized expense data for better financial tracking.
+    ///
+    public const string EXPENSE_ANALYST = "expense-analyst";
+
+    ///
+    /// Summary:
+    ///     Financial dashboard and analytics services
+    ///     Feature: (Dashboard visualization, top transactions, and expenditure analysis)
+    ///     -> Provides capabilities to visualize financial data through dashboards,
+    ///     highlight top transactions, and analyze expenditure patterns to support
+    ///     data-driven financial monitoring and decision-making.
+    ///
+    public const string FINANCIAL_DASHBOARD = "financial/dashboards";
+
+    ///
+    /// Summary:
+    ///     Financial dashboard and analytics services
+    ///     Feature: (Dashboard visualization, top transactions, and expenditure analysis)
+    ///     -> Provides capabilities to visualize financial data through dashboards,
+    ///     highlight top transactions, and analyze expenditure patterns to support
+    ///     data-driven financial monitoring and decision-making.
+    ///
+    public const string FINANCIAL_DASHBOARD_TOP_TRANSACTION = "top-transaction";
+
+    ///
+    /// Summary:
+    ///     Financial dashboard and analytics services
+    ///     Feature: (Dashboard visualization, top transactions, and expenditure analysis)
+    ///     -> Provides capabilities to visualize financial data through dashboards,
+    ///     highlight top transactions, and analyze expenditure patterns to support
+    ///     data-driven financial monitoring and decision-making.
+    ///
+    public const string FINANCIAL_DASHBOARD_REPORT = "report";
+
+    ///
+    /// Summary:
+    ///     Banner and advertising management services
+    ///     Feature: (Banner display management and visibility control)
+    ///     -> Provides capabilities to manage promotional banners, organize
+    ///     advertising content, and control banner status for marketing
+    ///     campaigns, homepage displays, and customer engagement activities.
+    ///
+    public const string BANNER = "ecom/banners";
+
+    ///
+    /// Summary:
+    ///     Online shopping and customer storefront services
+    ///     Feature: (Product browsing, categories, cart tracking, reviews, banners, and order processing)
+    ///     -> Provides capabilities for customer-facing shopping experiences,
+    ///     including product discovery, category navigation, top-sale listings,
+    ///     banner displays, cart quantity tracking,
+    ///     product reviews, order creation, payment processing, and order status monitoring.
+    ///
+    public const string BASE_COUNTER = "counters";
+
+    ///
+    /// Summary:
+    ///     Online shopping and customer storefront services
+    ///     Feature: (Product browsing, categories, cart tracking, reviews, banners, and order processing)
+    ///     -> Provides capabilities for customer-facing shopping experiences,
+    ///     including product discovery, category navigation, top-sale listings,
+    ///     banner displays, cart quantity tracking,
+    ///     product reviews, order creation, payment processing, and order status monitoring.
+    ///
+    public const string RECENT = "recent";
+
+    ///
+    /// Summary:
+    ///     Online shopping and customer storefront services
+    ///     Feature: (Product browsing, categories, cart tracking, reviews, banners, and order processing)
+    ///     -> Provides capabilities for customer-facing shopping experiences,
+    ///     including product discovery, category navigation, top-sale listings,
+    ///     banner displays, cart quantity tracking,
+    ///     product reviews, order creation, payment processing, and order status monitoring.
+    ///
+    public const string FinancialAnalyticsActivities = "activities";
+
+    ///
+    /// Summary:
+    ///     Online shopping and customer storefront services
+    ///     Feature: (Product browsing, categories, cart tracking, reviews, banners, and order processing)
+    ///     -> Provides capabilities for customer-facing shopping experiences,
+    ///     including product discovery, category navigation, top-sale listings,
+    ///     banner displays, cart quantity tracking,
+    ///     product reviews, order creation, payment processing, and order status monitoring.
+    ///
+    public const string FinancialAnalyticsExpenses = "expenses";
+
+    ///
+    /// Summary:
+    ///     Home dashboard financial analytics services
+    ///     Feature: (Financial statistics, monthly charts, expense breakdown, and recent transactions)
+    ///     -> Provides capabilities to retrieve financial statistics for home dashboard,
+    ///     display monthly spending trends, expense category breakdown, and recent
+    ///     transaction history for financial monitoring and insights.
+    ///
+    public const string HOME_FINANCIAL = "home/financial";
+
+    ///
+    /// Summary:
+    ///     Home dashboard financial analytics services
+    ///     Feature: (Financial statistics, monthly charts, expense breakdown, and recent transactions)
+    ///     -> Provides capabilities to retrieve financial statistics for home dashboard,
+    ///     display monthly spending trends, expense category breakdown, and recent
+    ///     transaction history for financial monitoring and insights.
+    ///
+    public const string HOME_FINANCIAL_COUNTER = "counters";
+
+    ///
+    /// Summary:
+    ///     Home dashboard financial analytics services
+    ///     Feature: (Financial statistics, monthly charts, expense breakdown, and recent transactions)
+    ///     -> Provides capabilities to retrieve financial statistics for home dashboard,
+    ///     display monthly spending trends, expense category breakdown, and recent
+    ///     transaction history for financial monitoring and insights.
+    ///
+    public const string HOME_FINANCIAL_MONTHLY = "monthly";
+
+    ///
+    /// Summary:
+    ///     Home dashboard financial analytics services
+    ///     Feature: (Financial statistics, monthly charts, expense breakdown, and recent transactions)
+    ///     -> Provides capabilities to retrieve financial statistics for home dashboard,
+    ///     display monthly spending trends, expense category breakdown, and recent
+    ///     transaction history for financial monitoring and insights.
+    ///
+    public const string HOME_FINANCIAL_EXPENSE = "expenses";
+
+    ///
+    /// Summary:
+    ///     Home dashboard financial analytics services
+    ///     Feature: (Financial statistics, monthly charts, expense breakdown, and recent transactions)
+    ///     -> Provides capabilities to retrieve financial statistics for home dashboard,
+    ///     display monthly spending trends, expense category breakdown, and recent
+    ///     transaction history for financial monitoring and insights.
+    ///
+    public const string HOME_FINANCIAL_RECENT = "recent";
 }

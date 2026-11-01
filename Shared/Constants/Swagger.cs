@@ -92,4 +92,93 @@ public class SwaggerConstant
     ///     Swagger documentation group for actor accounts, roles and permissions.
     ///
     public const string ACTOR = "system: actor";
+
+    ///
+    /// Summary:
+    ///     Platform core services
+    ///     Feature: (System health check, authentication, notifications, and utilities)
+    ///     -> Core platform services providing system monitoring, connectivity checks,
+    ///     authentication, token management, and shared utilities such as time,
+    ///     tagging, feedback, and notification handling across applications.
+    ///
+    public const string TAGS = "_: hastag";
+
+    ///
+    /// Summary:
+    ///     Financial management and analytics services
+    ///     Feature: (Cash tracking, expense management, categorization, and analytics dashboards)
+    ///     -> Provides capabilities to manage cash flow, track expenses and transactions,
+    ///     organize financial data by categories, and deliver insights through
+    ///     analytics dashboards for monitoring and decision-making.
+    ///
+    public const string CASH = "financial: cash";
+
+    ///
+    /// Summary:
+    ///     Financial management and analytics services
+    ///     Feature: (Cash tracking, expense management, categorization, and analytics dashboards)
+    ///     -> Provides capabilities to manage cash flow, track expenses and transactions,
+    ///     organize financial data by categories, and deliver insights through
+    ///     analytics dashboards for monitoring and decision-making.
+    ///
+    public const string CASH_DESCRIPTION = "financial: description";
+
+    ///
+    /// Summary:
+    ///     Financial management and analytics services
+    ///     Feature: (Cash tracking, expense management, categorization, and analytics dashboards)
+    ///     -> Provides capabilities to manage cash flow, track expenses and transactions,
+    ///     organize financial data by categories, and deliver insights through
+    ///     analytics dashboards for monitoring and decision-making.
+    ///
+    public const string FINANCIAL_ANALYTIC = "financial: analysis";
+
+    ///
+    /// Summary:
+    ///     Financial management and analytics services
+    ///     Feature: (Cash tracking, expense management, categorization, and analytics dashboards)
+    ///     -> Provides capabilities to manage cash flow, track expenses and transactions,
+    ///     organize financial data by categories, and deliver insights through
+    ///     analytics dashboards for monitoring and decision-making.
+    ///
+    public const string EXPENSE = "financial: expense";
+
+    ///
+    /// Summary:
+    ///     Financial management and analytics services
+    ///     Feature: (Cash tracking, expense management, categorization, and analytics dashboards)
+    ///     -> Provides capabilities to manage cash flow, track expenses and transactions,
+    ///     organize financial data by categories, and deliver insights through
+    ///     analytics dashboards for monitoring and decision-making.
+    ///
+    public const string TIMELINE = "financial: timeline";
+
+    ///
+    /// Summary:
+    ///     Financial management and analytics services
+    ///     Feature: (Cash tracking, expense management, categorization, and analytics dashboards)
+    ///     -> Provides capabilities to manage cash flow, track expenses and transactions,
+    ///     organize financial data by categories, and deliver insights through
+    ///     analytics dashboards for monitoring and decision-making.
+    ///
+    public const string EXPENSE_TRANSACTION = "financial: transaction";
+
+    ///
+    /// Summary:
+    ///     Financial management and analytics services
+    ///     Feature: (Cash tracking, expense management, categorization, and analytics dashboards)
+    ///     -> Provides capabilities to manage cash flow, track expenses and transactions,
+    ///     organize financial data by categories, and deliver insights through
+    ///     analytics dashboards for monitoring and decision-making.
+    ///
+    public const string DASHBOARD = "financial: dashboard";
+
+    ///
+    /// Summary:
+    ///     Home dashboard services
+    ///     Feature: (Dashboard statistics, recent activities, and analytics overview)
+    ///     -> Provides capabilities to display home dashboard metrics, recent activities,
+    ///     and aggregated statistics across different modules for quick insights.
+    ///
+    public const string HOME_FINANCIAL = "home: financial";
 }

@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "58342068-106d-4950-99ed-43725203a28a",
+    "name": "Chi tiêu",
+    "enum": "APPLICATION_FINANCIAL",
+    "description": "Ứng dụng Chi tiêu giúp doanh nghiệp quản lý toàn diện các khoản thu - chi, lập kế hoạch ngân sách và kiểm soát dòng tiền hiệu quả. Người dùng có thể theo dõi hóa đơn chi phí, phân loại hạng mục tài chính, kiểm soát ngân sách theo từng phòng ban và đưa ra quyết định tài chính chính xác hơn.",
+    "permission": [
+      "APPLICATION_FINANCIAL",
+      "FINANCIAL_EXPENSE",
+      "FINANCIAL_DASHBOARD",
+      "HOME_OVERVIEW"
+    ],
+    "icon": "system/artifacts/static/Financial.png",
+    "createdAt": "2023-11-18T08:00:00.000Z"
+  }
+]

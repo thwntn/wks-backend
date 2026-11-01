@@ -4,6 +4,8 @@ Base ASP.NET Core / .NET 10 backend extracted from ECMC. Source namespaces use `
 
 ## Retained
 
+Financial is migrated from ECMC: timelines, expenses, transactions, cash, reports, analytics and home dashboard. Shared hashtag support is included.
+
 - Accounts, password/Google authentication, verification codes, JWT, refresh tokens, cookies and sessions.
 - Profiles, actor accounts, roles, permission policies and platform administration.
 - Notifications, SignalR and Redis pub/sub.
@@ -14,7 +16,7 @@ Base ASP.NET Core / .NET 10 backend extracted from ECMC. Source namespaces use `
 
 The System/Push browser subscription/key APIs, legacy Cloud file management, folders, collaboration groups and trash are omitted; file transfer uses Artifact.
 
-Business apps are omitted: Home dashboards, commerce/POS/catalog, customers/audience, warehouse, finance, marketing/automation/broadcasts, redirect campaigns, billing, subscriptions/quotas, wallet, signage and AI features. App-specific consumers, recurring jobs, admin operations, metadata and old migrations are removed. Account provisioning creates its default role without registering a package or generating marketing/redirect data.
+Business apps are omitted: Home dashboards, commerce/POS/catalog, customers/audience, warehouse, marketing/automation/broadcasts, redirect campaigns, billing, subscriptions/quotas, wallet, signage and AI features. App-specific consumers, recurring jobs, admin operations, metadata and old migrations are removed. Account provisioning creates its default role without registering a package or generating marketing/redirect data.
 
 ## Local setup
 
@@ -45,7 +47,7 @@ Environment variables take precedence over `.env`; blank lines in the file are s
 
 ## Database
 
-`InitialBase` is a fresh migration for the retained platform tables, including a `DEFAULT_PERMISSION` setting initialized to `[]`. Set the desired default permission codes through platform administration. Bootstrap elevated access through the retained role endpoint with your configured `AdminRequiredPass`; no admin account/password is seeded.
+`InitialBase` is a fresh migration for the retained platform tables, including a `DEFAULT_PERMISSION` setting. The Financial migration grants home, application, expense and dashboard access to new accounts by default. Set the desired default permission codes through platform administration. Bootstrap elevated access through the retained role endpoint with your configured `AdminRequiredPass`; no admin account/password is seeded.
 
 Use a new WKS database. The ECMC migration history and production data are not copied. Migrations are applied explicitly with `dotnet ef database update`; application startup does not migrate automatically. A design-time factory allows migration generation without starting Redis, RabbitMQ or the web host.
 

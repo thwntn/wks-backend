@@ -4,5 +4,29 @@
     "name": "Quản trị cài đặt",
     "description": "Quyền chỉnh sửa cấu hình hệ thống",
     "group": "admin"
+  },
+  {
+    "enum": "APPLICATION_FINANCIAL",
+    "name": "Tài chính",
+    "description": "Truy cập ứng dụng Tài chính",
+    "group": "application"
+  },
+  {
+    "enum": "FINANCIAL_EXPENSE",
+    "name": "Chi tiêu",
+    "description": "Xem và quản lý chi tiêu",
+    "group": "navigation"
+  },
+  {
+    "enum": "FINANCIAL_DASHBOARD",
+    "name": "Dashboard tài chính",
+    "description": "Xem dashboard tài chính",
+    "group": "navigation"
+  },
+  {
+    "enum": "HOME_OVERVIEW",
+    "name": "Tổng quan",
+    "description": "Xem trang tổng quan chính",
+    "group": "navigation"
   }
 ]

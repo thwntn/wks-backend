@@ -227,6 +227,81 @@ namespace backend.Infras.Persistence.Migrations
                     b.ToTable("Artifact");
                 });
 
+            modelBuilder.Entity("Wks.Databases.Cash", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ProfileId")
+                        .HasColumnType("uuid");
+
+                    b.Property<long>("Quantity")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("Cash");
+                });
+
+            modelBuilder.Entity("Wks.Databases.CashDescription", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("CashId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("CashNames")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Quantity")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CashId");
+
+                    b.ToTable("CashDescription");
+                });
+
             modelBuilder.Entity("Wks.Databases.Domain", b =>
                 {
                     b.Property<Guid>("Id")
@@ -259,6 +334,107 @@ namespace backend.Infras.Persistence.Migrations
                     b.HasIndex("ProfileId");
 
                     b.ToTable("Domain");
+                });
+
+            modelBuilder.Entity("Wks.Databases.Expense", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<long>("Budget")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsPinned")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ProfileId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TimelineId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfileId");
+
+                    b.HasIndex("TimelineId");
+
+                    b.ToTable("Expense");
+                });
+
+            modelBuilder.Entity("Wks.Databases.ExpenseTransaction", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("numeric");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ExpenseId")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("IsLocked")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid?>("ProfileId")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("Spend")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExpenseId");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("ExpenseTransaction");
                 });
 
             modelBuilder.Entity("Wks.Databases.Feedback", b =>
@@ -388,6 +564,44 @@ namespace backend.Infras.Persistence.Migrations
                     b.HasIndex("AccountId");
 
                     b.ToTable("Google");
+                });
+
+            modelBuilder.Entity("Wks.Databases.Hashtag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Filter")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ProfileId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("Hashtag");
                 });
 
             modelBuilder.Entity("Wks.Databases.Icon", b =>
@@ -703,8 +917,67 @@ namespace backend.Infras.Persistence.Migrations
                             Id = new Guid("5c2a98b3-3c07-4dd1-90d1-74d08b731251"),
                             CreatedAt = new DateTime(2026, 11, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Name = "DEFAULT_PERMISSION",
-                            Value = "[]"
+                            Value = "[\"HOME_OVERVIEW\",\"APPLICATION_FINANCIAL\",\"FINANCIAL_EXPENSE\",\"FINANCIAL_DASHBOARD\"]"
                         });
+                });
+
+            modelBuilder.Entity("Wks.Databases.Timeline", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("FromDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<bool>("IsPinned")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ProfileId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("ToDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("Timeline");
+                });
+
+            modelBuilder.Entity("Wks.Databases.TimelineTag", b =>
+                {
+                    b.Property<Guid>("TimelineId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TagId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("TimelineId", "TagId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("TimelineTag");
                 });
 
             modelBuilder.Entity("Wks.Databases.Account", b =>
@@ -738,6 +1011,28 @@ namespace backend.Infras.Persistence.Migrations
                     b.Navigation("AppVersion");
                 });
 
+            modelBuilder.Entity("Wks.Databases.Cash", b =>
+                {
+                    b.HasOne("Wks.Databases.Profile", "Profile")
+                        .WithMany()
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Profile");
+                });
+
+            modelBuilder.Entity("Wks.Databases.CashDescription", b =>
+                {
+                    b.HasOne("Wks.Databases.Cash", "Cash")
+                        .WithMany("CashDescriptions")
+                        .HasForeignKey("CashId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cash");
+                });
+
             modelBuilder.Entity("Wks.Databases.Domain", b =>
                 {
                     b.HasOne("Wks.Databases.Profile", "Profile")
@@ -747,6 +1042,40 @@ namespace backend.Infras.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Profile");
+                });
+
+            modelBuilder.Entity("Wks.Databases.Expense", b =>
+                {
+                    b.HasOne("Wks.Databases.Profile", "Profile")
+                        .WithMany()
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Wks.Databases.Timeline", "Timeline")
+                        .WithMany("Expenses")
+                        .HasForeignKey("TimelineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Profile");
+
+                    b.Navigation("Timeline");
+                });
+
+            modelBuilder.Entity("Wks.Databases.ExpenseTransaction", b =>
+                {
+                    b.HasOne("Wks.Databases.Expense", "Expense")
+                        .WithMany("ExpenseTransactions")
+                        .HasForeignKey("ExpenseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Wks.Databases.Profile", null)
+                        .WithMany("ExpenseTransactions")
+                        .HasForeignKey("ProfileId");
+
+                    b.Navigation("Expense");
                 });
 
             modelBuilder.Entity("Wks.Databases.Feedback", b =>
@@ -788,6 +1117,17 @@ namespace backend.Infras.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Account");
+                });
+
+            modelBuilder.Entity("Wks.Databases.Hashtag", b =>
+                {
+                    b.HasOne("Wks.Databases.Profile", "Profile")
+                        .WithMany("Tags")
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Profile");
                 });
 
             modelBuilder.Entity("Wks.Databases.Icon", b =>
@@ -861,6 +1201,36 @@ namespace backend.Infras.Persistence.Migrations
                     b.Navigation("Account");
                 });
 
+            modelBuilder.Entity("Wks.Databases.Timeline", b =>
+                {
+                    b.HasOne("Wks.Databases.Profile", "Profile")
+                        .WithMany()
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Profile");
+                });
+
+            modelBuilder.Entity("Wks.Databases.TimelineTag", b =>
+                {
+                    b.HasOne("Wks.Databases.Hashtag", "Tag")
+                        .WithMany()
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Wks.Databases.Timeline", "Timeline")
+                        .WithMany("TimelineTags")
+                        .HasForeignKey("TimelineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tag");
+
+                    b.Navigation("Timeline");
+                });
+
             modelBuilder.Entity("Wks.Databases.Account", b =>
                 {
                     b.Navigation("LoginAccounts");
@@ -875,22 +1245,43 @@ namespace backend.Infras.Persistence.Migrations
                     b.Navigation("Features");
                 });
 
+            modelBuilder.Entity("Wks.Databases.Cash", b =>
+                {
+                    b.Navigation("CashDescriptions");
+                });
+
+            modelBuilder.Entity("Wks.Databases.Expense", b =>
+                {
+                    b.Navigation("ExpenseTransactions");
+                });
+
             modelBuilder.Entity("Wks.Databases.Profile", b =>
                 {
                     b.Navigation("Actions");
 
                     b.Navigation("Domains");
 
+                    b.Navigation("ExpenseTransactions");
+
                     b.Navigation("Icons");
 
                     b.Navigation("Notifications");
 
                     b.Navigation("RefreshTokens");
+
+                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("Wks.Databases.Role", b =>
                 {
                     b.Navigation("Permissions");
+                });
+
+            modelBuilder.Entity("Wks.Databases.Timeline", b =>
+                {
+                    b.Navigation("Expenses");
+
+                    b.Navigation("TimelineTags");
                 });
 #pragma warning restore 612, 618
         }

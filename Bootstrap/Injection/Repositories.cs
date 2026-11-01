@@ -28,5 +28,22 @@ public class Repositories
         services.AddScoped<IPermissionRepository, PermissionRepository>();
         services.AddScoped<IVersionRepository, VersionRepository>();
         services.AddScoped<IFeatureRepository, FeatureVersionRepository>();
+        ///
+        /// Summary:
+        ///     Registers Financial and its shared hashtag dependencies.
+        ///
+        services.AddScoped<IExpenseRepository, ExpenseRepository>();
+        services.AddScoped<ITimelineRepository, TimelineRepository>();
+        services.AddScoped<
+            IExpenseTransactionRepository,
+            ExpenseTransactionRepository
+        >();
+        services.AddScoped<IHashTagRepository, TagRepository>();
+        services.AddScoped<ICashRepository, CashRepository>();
+        services.AddScoped<
+            ICashDescriptionRepository,
+            CashDescriptionRepository
+        >();
+
     }
 }

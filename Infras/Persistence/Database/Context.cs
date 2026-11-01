@@ -8,7 +8,7 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
 {
     ///
     /// Summary:
-    ///     Configures the platform model and seeds the DEFAULT_PERMISSION setting with an empty list.
+    ///     Configures the platform model and seeds the default permissions for the Financial application.
     ///     The seed identifier and timestamp are fixed so migration snapshots remain stable.
     ///
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
         {
             Id = Guid.Parse("5c2a98b3-3c07-4dd1-90d1-74d08b731251"),
             Name = nameof(SettingNames.DEFAULT_PERMISSION),
-            Value = "[]",
+            Value = "[\"HOME_OVERVIEW\",\"APPLICATION_FINANCIAL\",\"FINANCIAL_EXPENSE\",\"FINANCIAL_DASHBOARD\"]",
             CreatedAt = new DateTime(2026, 11, 1, 0, 0, 0, DateTimeKind.Utc),
         });
     }
@@ -102,4 +102,13 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
     ///     Changelog features associated with application versions.
     ///
     public DbSet<AppFeature> AppFeature { get; set; }
+
+    /// <summary>Financial timelines, expenses, transactions, cash and their shared tags.</summary>
+    public DbSet<Cash> Cash { get; set; }
+    public DbSet<CashDescription> CashDescription { get; set; }
+    public DbSet<Timeline> Timeline { get; set; }
+    public DbSet<TimelineTag> TimelineTag { get; set; }
+    public DbSet<Expense> Expense { get; set; }
+    public DbSet<ExpenseTransaction> ExpenseTransaction { get; set; }
+    public DbSet<Hashtag> Hashtag { get; set; }
 }

@@ -216,5 +216,142 @@ public class Services
         services.AddScoped<IGetProfileGoogle, GetProfileGoogle>();
         services.AddScoped<IGetUrlGoogle, GetUrlGoogle>();
         services.AddScoped<ISendFcm, SendFcm>();
+        ///
+        /// Summary:
+        ///     Registers Financial and its shared hashtag dependencies.
+        ///
+        services.AddScoped<IOverviewDashboard, OverviewDashboard>();
+        services.AddScoped<IGetExpenseAnalyst, GetExpenseAnalyst>();
+        services.AddScoped<IGetTopTransaction, GetTopTransaction>();
+        services.AddScoped<IGetFinancialReport, GetFinancialReport>();
+        services.AddScoped<
+            IGetActivitiesFinancialAnalytics,
+            GetActivityFinancialAnalytics
+        >();
+        services.AddScoped<
+            IGroupExpenseFinancialAnalytics,
+            GroupExpenseFinancialAnalytics
+        >();
+        services.AddScoped<IListExpense, ListExpense>();
+        services.AddScoped<ICreateExpense, CreateExpense>();
+        services.AddScoped<IUpdateExpense, UpdateExpense>();
+        services.AddScoped<IRemoveExpense, RemoveExpense>();
+        services.AddScoped<IInfoExpense, InfoExpense>();
+        services.AddScoped<IFilterExpense, FilterExpense>();
+        services.AddScoped<IBannerExpense, BannerExpense>();
+        services.AddScoped<ICalculatedExpense, CalculatedExpense>();
+        services.AddScoped<IGetCounterExpense, GetCounterExpense>();
+        services.AddScoped<IPinExpense, PinExpense>();
+        services.AddScoped<IUnpinExpense, UnpinExpense>();
+        services.AddScoped<ICreateExpenseHandler, CreateExpenseHandler>();
+        services.AddScoped<IUpdateExpenseHandler, UpdateExpenseHandler>();
+        services.AddScoped<IRemoveExpenseHandler, RemoveExpenseHandler>();
+        services.AddScoped<IPinExpenseHandler, PinExpenseHandler>();
+        services.AddScoped<IUnpinExpenseHandler, UnpinExpenseHandler>();
+        services.AddScoped<IRealtimeExpensePort, RealtimeExpenseAdapter>();
+        services.AddScoped<IListTimeline, ListTimeline>();
+        services.AddScoped<ICreateTimeline, CreateTimeline>();
+        services.AddScoped<IUpdateTimeline, UpdateTimeline>();
+        services.AddScoped<IRemoveTimeline, RemoveTimeline>();
+        services.AddScoped<IInfoTimeline, InfoTimeline>();
+        services.AddScoped<ICounterTimeline, CounterTimeline>();
+        services.AddScoped<ITimeline, TimelineUseCase>();
+        services.AddScoped<ICloneTimeline, CloneTimeline>();
+        services.AddScoped<IUpdateTagTimeline, UpdateTagTimeline>();
+        services.AddScoped<IPinTimeline, PinTimeline>();
+        services.AddScoped<IUnpinTimeline, UnpinTimeline>();
+        services.AddScoped<IChartTimeline, ChartTimeline>();
+        services.AddScoped<IRecentTimeline, RecentTimeline>();
+        services.AddScoped<IPeriodTimeline, PeriodTimeline>();
+        services.AddScoped<ICashflowTimeline, CashflowTimeline>();
+        services.AddScoped<ICreateTimelineHandler, CreateTimelineHandler>();
+        services.AddScoped<IUpdateTimelineHandler, UpdateTimelineHandler>();
+        services.AddScoped<IRemoveTimelineHandler, RemoveTimelineHandler>();
+        services.AddScoped<ICloneTimelineHandler, CloneTimelineHandler>();
+        services.AddScoped<
+            IUpdateTagTimelineHandler,
+            UpdateTagTimelineHandler
+        >();
+        services.AddScoped<IPinTimelineHandler, PinTimelineHandler>();
+        services.AddScoped<IUnpinTimelineHandler, UnpinTimelineHandler>();
+        services.AddScoped<IRealtimeTimelinePort, RealtimeTimelineAdapter>();
+        services.AddScoped<IListExpenseTransaction, ListExpenseTransaction>();
+        services.AddScoped<
+            ICreateExpenseTransaction,
+            CreateExpenseTransaction
+        >();
+        services.AddScoped<
+            IRemoveExpenseTransaction,
+            RemoveExpenseTransaction
+        >();
+        services.AddScoped<
+            IUpdateExpenseTransaction,
+            UpdateExpenseTransaction
+        >();
+        services.AddScoped<
+            IWithCategoryExpenseTransaction,
+            WithCategoryExpenseTransaction
+        >();
+        services.AddScoped<
+            ICounterExpenseTransaction,
+            CounterExpenseTransaction
+        >();
+        services.AddScoped<
+            IStatisticExpenseTransaction,
+            StatisticExpenseTransaction
+        >();
+        services.AddScoped<
+            IExpenditureExpenseTransaction,
+            ExpenditureExpenseTransaction
+        >();
+        services.AddScoped<ISuggestExpense, SuggestExpense>();
+        services.AddScoped<
+            ICreateExpenseTransactionHandler,
+            CreateExpenseTransactionHandler
+        >();
+        services.AddScoped<
+            IUpdateExpenseTransactionHandler,
+            UpdateExpenseTransactionHandler
+        >();
+        services.AddScoped<
+            IRemoveExpenseTransactionHandler,
+            RemoveExpenseTransactionHandler
+        >();
+        services.AddScoped<
+            IRealtimeTransactionPort,
+            RealtimeTransactionAdapter
+        >();
+        services.AddScoped<ICreateCash, CreateCash>();
+        services.AddScoped<IRemoveCash, RemoveCash>();
+        services.AddScoped<IListCashDescription, ListCashDescription>();
+        services.AddScoped<IRecentCashDescription, RecentCashDescription>();
+        services.AddScoped<ICreateCashDescription, CreateCashDescription>();
+        services.AddScoped<ICreateCashHandler, CreateCashHandler>();
+        services.AddScoped<IRemoveCashHandler, RemoveCashHandler>();
+        services.AddScoped<
+            ICreateCashDescriptionHandler,
+            CreateCashDescriptionHandler
+        >();
+        services.AddScoped<IListHashTag, ListHashTag>();
+        services.AddScoped<IGetHashTag, GetHashTag>();
+        services.AddScoped<ICreateHashTag, CreateHashTag>();
+        services.AddScoped<IUpdateHashTag, UpdateHashTag>();
+        services.AddScoped<IRemoveHashTag, RemoveHashTag>();
+        services.AddScoped<ICreateHashTagHandler, CreateHashTagHandler>();
+        services.AddScoped<IUpdateHashTagHandler, UpdateHashTagHandler>();
+        services.AddScoped<ICounterHomeFinancial, CounterHomeFinancial>();
+        services.AddScoped<
+            IMonthlyChartHomeFinancial,
+            MonthlyChartHomeFinancial
+        >();
+        services.AddScoped<
+            ISpendingByExpenseHomeFinancial,
+            SpendingByExpenseHomeFinancial
+        >();
+        services.AddScoped<
+            IRecentTransactionHomeFinancial,
+            RecentTransactionHomeFinancial
+        >();
+
     }
 }
