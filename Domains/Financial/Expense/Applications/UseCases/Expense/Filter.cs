@@ -7,10 +7,13 @@ public class FilterExpense(
 {
     public async Task<IEnumerable<Expense>> ExecuteAsync(Guid profileId)
     {
-        string nameofCache = nameof(Expense) + profileId;
+        string cacheName = Format.ToCacheName(
+            nameof(CacheNames.FINANCIAL_EXPENSE),
+            profileId
+        );
         IEnumerable<Expense> expenses = await _cacheService.GetAsync<
             IEnumerable<Expense>
-        >(nameofCache);
+        >(cacheName);
 
         expenses ??= await EntityFrameworkQueryableExtensions.ToListAsync(
             _databaseContext

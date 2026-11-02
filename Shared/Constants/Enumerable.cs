@@ -23,128 +23,9 @@ public enum PrintJobStatusEnum
 
 ///
 /// Summary:
-///     Defines the application runtime environment mode.
-///
-public enum SystemModeEnum
-{
-    ///
-    /// Summary:
-    ///     Development environment for local testing and debugging.
-    ///
-    Development,
-
-    ///
-    /// Summary:
-    ///     Production environment for live deployment.
-    ///
-    Production,
-}
-
-///
-/// Summary:
 ///     Defines WebSocket subscriber channel types for real-time communication.
 ///
 public enum SocketSubscriberChannelEnum { }
-
-///
-/// Summary:
-///     Defines runtime configuration keys for environment variables and application settings.
-///     Used to access configuration values throughout the application.
-///
-public enum Runtime
-{
-    Host,
-    Mode,
-    BackendApi,
-    Database,
-    Prefix,
-    Timezone,
-    HubPath,
-    EnableLegacyTimestampBehavior,
-    Origins,
-    LogIndexName,
-    MaxRequestBodyLogSize,
-    MaxRequestSize,
-    ApmHost,
-    ApmServiceName,
-    ApmCenterConfig,
-    ApmSecretToken,
-    ApmVersion,
-    QueueHost,
-    QueuePublisherCapacity,
-    QueuePublisherConcurrency,
-    QueuePublisherTimeoutSeconds,
-    QueuePublisherMaxRetryDelaySeconds,
-    WithConsumer,
-    WithJob,
-    PrefixJob,
-    HangfirePrefix,
-    WithSocket,
-    SocketChannel,
-    Redis,
-    SendingPathSize,
-    Api,
-    StorageHost,
-    StorageUseSsl,
-    StorageBucketName,
-    StorageAccess,
-    PresignedExpired,
-    StorageSecret,
-    Issuer,
-    Audience,
-    JwtKey,
-    JwtExpire,
-    RefreshTokenExpired,
-    Media,
-    Static,
-    Migration,
-    Swagger,
-    SwaggerLabel,
-    RouterPrefix,
-    VersionSwagger,
-    SwaggerNameReplace,
-    SwaggerNameTo,
-    TokenScheme,
-    AddressProvince,
-    AddressDistrict,
-    AddressWard,
-    Authorization,
-    GoogleAuthorizationHost,
-    GoogleOauthHost,
-    GoogleClientId,
-    GoogleSecretId,
-    GoogleApiHost,
-    GoogleRedirectUri,
-    GoogleGrandType,
-    GatewayConnector,
-    HistoryConnect,
-    HistoryDirectory,
-    SizeStorage,
-    MaiUserName,
-    MailApiKey,
-    MailFrom,
-    MailDomain,
-    MailgunApi,
-    MailUserName,
-    TelegramBotUri,
-    ZaloApi,
-    ZaloAuthorizationHost,
-    ZaloOauthHost,
-    ZaloApiHost,
-    ZaloAppId,
-    ZaloSecretKey,
-    ZaloRedirectUri,
-    ZaloAuthorizationCodeGrantType,
-    ZaloRefreshTokenGrantType,
-    IntelligenceApi,
-    IntelligenceApiKey,
-    IntelligenceModel,
-    IntelligenceRole,
-    AdminRequiredPass,
-    HangfireUsername,
-    HangfirePassword,
-    HangfireScheme,
-}
 
 ///
 /// Summary:
@@ -300,24 +181,6 @@ public enum LogEventEnum
 
 ///
 /// Summary:
-///     Defines background job names for scheduled tasks and recurring operations.
-///
-public enum JobNames
-{
-    RedirectDailyTraffic,
-    RedirectTemplateStatistic,
-    AudienceMemberUpgrade,
-    BroadcastDailyStatistic,
-    RedirectCampaignStatus,
-    AutomationClearNode,
-    RedirectDeliveryClear,
-    BannerExpiredStatus,
-    ZaloCredentialRefreshToken,
-    GoodsReceiptAutoComplete,
-}
-
-///
-/// Summary:
 ///     Defines folder names for file storage organization.
 ///
 public enum FolderNames
@@ -328,160 +191,6 @@ public enum FolderNames
     Avatar,
     Broadcast,
     Products,
-}
-
-///
-/// Summary:
-///     Defines SignalR hub method names for real-time client-server communication.
-///     Used for WebSocket message routing and event broadcasting.
-///
-public enum HubMethodName
-{
-    INITIALIZE,
-    NOTIFICATION_TRIGGER,
-    PING,
-    PONG,
-    ERROR,
-
-    EXPENSE_TRANSACTION,
-    EXPENSE,
-    FUND,
-    CASH,
-
-    SYSTEM_PUSH,
-
-    SIGN_LISTEN,
-    REMOVE_LISTEN,
-    UPDATE_MESSAGE,
-    UPDATE_LIST_FILE,
-
-    FEEDBACK,
-
-    DATA,
-    DATA_INFORMATION,
-    TEMPLATE,
-    MARKETING_BROADCAST,
-    PROFILE_CONFIG,
-
-    MARKETING_FILTER,
-    MARKETING_CONTENT,
-    MARKETING_AUTOMATION,
-
-    PRODUCT,
-    UPDATE_GROUP,
-    SCANNER_PRODUCT,
-    KANBAN_CATEGORY,
-
-    CATEGORIES = 28,
-
-    BRAND,
-    BANNER,
-
-    INVOICE_OPEN_TRANSACTION = 32,
-    INVOICE_CLOSE_TRANSACTION,
-    INVOICE_FINISH_TRANSACTION,
-
-    SALE_PROGRAM,
-    PROMOTION,
-    DISCOUNT,
-    CUSTOMER,
-    MEMBERSHIP,
-    AUDIENCE_CONSENT,
-    AUDIENCE_CREDENTIAL,
-
-    MAIL_CREDENTIAL,
-    ZALO_CREDENTIAL,
-    TELEGRAM_CREDENTIAL,
-    WEB_PUSH_CREDENTIAL,
-
-    FINANCIAL_TIMELINE,
-    ORDER,
-    ORDER_COMPLETED,
-
-    DOMAIN,
-    REDIRECT_URL,
-    REDIRECT_CAMPAIGN,
-    REDIRECT_TEMPLATE,
-    REDIRECT_WEBHOOK,
-
-    WAREHOUSE,
-    WAREHOUSE_GOODS_RECEIPT,
-    WAREHOUSE_GOODS_ISSUE,
-    WAREHOUSE_STOCK_COUNT,
-    WAREHOUSE_INVENTORY_ADJUSTMENT,
-}
-
-///
-/// Summary:
-///     Defines cache key names for Redis caching operations.
-///     Used to store and retrieve cached data across the application.
-///
-public enum CacheNames
-{
-    AUTH_CONFIRM_COUNT_MESSAGE,
-    AUTH_CONFIRM_PREVIOUS_TIME,
-    AUTH_TEMPLATE_CONFIRM,
-    AUTH_USER_SETUP,
-    AUTH_PERMISSION,
-    AUTH_ACTOR_ACCOUNT,
-    PROFILE_SETTING,
-    MEDIA_FILE,
-    JWT_REFRESH_TOKEN,
-    QUOTAS_COUNTER,
-    BROADCAST_EMAIL,
-    CUSTOMER_PROFILE,
-    CUSTOMER_LOGIN,
-    CUSTOMER_AUDIT_ACTION,
-    SHOP_ORDER_GENERATE,
-    SHOP_BANNER,
-    SHOP_SETUP,
-    SHOP_DOMAIN,
-    REDIRECT_DOMAIN,
-    REDIRECT_LINK,
-    REDIRECT_ANALYST_ACCESS,
-    REDIRECT_ANALYST_BROWSER,
-    REDIRECT_STATUS_CAMPAIGN,
-    REDIRECT_STATUS_TEMPLATE,
-    REDIRECT_CAMPAIGN_EXPORTING,
-    REDIRECT_CAMPAIGN_STATUS,
-    REDIRECT_WEBHOOK_STATUS,
-    REDIRECT_WEBHOOK_EVENT,
-    REDIRECT_DELIVERY_STATUS,
-    REDIRECT_WEBHOOK_ENDPOINT,
-    MARKETING_DATA_TYPE,
-    MARKETING_DATA_NAME,
-    MARKETING_CONTENT_PUBLISH_STATUS,
-    MARKETING_CONTACT_UNIQUE,
-    MARKETING_TELEGRAM_CREDENTIAL,
-    MARKETING_MAIL_CREDENTIAL,
-    MARKETING_AUTOMATION_STATUS,
-    MARKETING_AUTOMATION_TYPE,
-    MARKETING_AUTOMATION_OPERATOR,
-    MARKETING_AUTOMATION_LOOP,
-    MARKETING_AUTOMATION_HTTP_METHOD,
-    MARKETING_ZALO_CREDENTIAL,
-    MARKETING_WEB_PUSH_CREDENTIAL,
-    MARKETING_BROADCAST,
-    MARKETING_BROADCAST_FORMAT,
-    MARKETING_CONTENT,
-    MARKETING_AUTOMATION,
-    MARKETING_FILTER,
-    MARKETING_DATA,
-    REDIRECT_WEBHOOK,
-    REDIRECT_TEMPLATE,
-    REDIRECT_DELIVERY,
-    BUSINESS_PRODUCT,
-    BUSINESS_BRAND,
-    BUSINESS_CATEGORY,
-    BUSINESS_ORDER,
-    BUSINESS_BANNER,
-    FINANCIAL_TIMELINE,
-    AUDIENCE_MEMBERSHIP,
-    AUDIENCE_CONSENT,
-    AUDIENCE_CONSENT_TYPE,
-    DOMAIN_TYPE,
-    WEBHOOK_TELEGRAM_USER,
-    SYSTEM_ROLE_PERMISSION,
 }
 
 ///
@@ -582,25 +291,6 @@ public enum DefaultFolder
 
 ///
 /// Summary:
-///     Defines notification types for system-wide user notifications.
-///
-public enum NotificationNames
-{
-    DEFAULT = 1,
-    REMOVE_FROM_GROUP = 2,
-    INVITE_TO_GROUP = 3,
-    UPLOADABLE = 4,
-    EXPIRE_PLAN = 5,
-    CREATED_EXPENSE_TRANSACTION = 6,
-    EXPENSE_TRANSACTION_CREATE = 7,
-    PLAN_REMINDER = 8,
-
-    REDIRECT_EXPORT_CAMPAIGN = 9,
-    REDIRECT_EXPORT_CAMPAIGN_FAILED = 10,
-}
-
-///
-/// Summary:
 ///     Defines group invitation status for collaboration features.
 ///
 public enum GroupInviteStatus
@@ -670,36 +360,6 @@ public enum CashNames
     None = 0,
     Abstract = 1,
     Subtract = 2,
-}
-
-///
-/// Summary:
-///     Defines system-wide configuration setting keys.
-///
-public enum SettingNames
-{
-    APP_REDIRECT_DOMAIN,
-    APP_SHOP_DOMAIN,
-    DEFAULT_CUSTOMER,
-    DEFAULT_DISCOUNT,
-    DEFAULT_PAYMENT,
-    DEFAULT_PERMISSION,
-
-    PACKAGE_FREE,
-    PACKAGE_PERSONAL,
-    PACKAGE_BUSINESS,
-
-    BANK_ID,
-    BANK_ACCOUNT_NAME,
-    BANK_ACCOUNT_NO,
-
-    TELEGRAM_TOKEN,
-    TELEGRAM_CHAT_ID,
-
-    REDIRECT_TEMPLATE_MAX_ROWS,
-    REDIRECT_WEBHOOK_MAX_RETRY,
-    REDIRECT_DELIVERY_RETENTION_DAYS,
-    REDIRECT_WEBHOOK_MAX_PER_PROFILE,
 }
 
 ///

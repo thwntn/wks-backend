@@ -16,7 +16,7 @@ public class NameSetting(ICache _cache) : INameSetting
     ///
     public async Task<List<SettingObject.Key>> ExecuteAsync() =>
         await _cache.CacheAsync(
-            nameof(NameSetting),
+            nameof(CacheNames.PROFILE_SETTING_NAME),
             async () =>
             {
                 string define = await File.ReadAllTextAsync(

@@ -25,8 +25,11 @@ public class UpdateExpense(
         Expense mapped = expense.Merge(update);
         _expenseRepository.Update(mapped);
 
-        string nameofCache = nameof(Expense) + profileId;
-        await _cacheService.RemoveAsync(nameofCache);
+        string cacheName = Format.ToCacheName(
+            nameof(CacheNames.FINANCIAL_EXPENSE),
+            profileId
+        );
+        await _cacheService.RemoveAsync(cacheName);
 
         BudgetUpdate(update.Budget, expense.Id);
 

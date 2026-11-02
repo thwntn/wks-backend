@@ -47,12 +47,15 @@ public class CreateExpenseTransaction(
 
     private async Task ResetCache(Guid profileId)
     {
-        List<string> nameofCaches =
+        List<string> cacheNames =
         [
-            nameof(ExpenseTransaction) + profileId,
-            nameof(Expense) + profileId,
+            Format.ToCacheName(
+                nameof(CacheNames.FINANCIAL_EXPENSE_TRANSACTION),
+                profileId
+            ),
+            Format.ToCacheName(nameof(CacheNames.FINANCIAL_EXPENSE), profileId),
         ];
-        nameofCaches.ForEach(async (item) => await _cacheService.RemoveAsync(item));
-        await Task.CompletedTask;
+        foreach (string cacheName in cacheNames)
+            await _cacheService.RemoveAsync(cacheName);
     }
 }

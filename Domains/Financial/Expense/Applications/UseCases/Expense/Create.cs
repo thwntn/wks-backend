@@ -15,8 +15,11 @@ public class CreateExpense(
 
         _expenseRepository.Create(expense);
 
-        string nameofCache = nameof(Expense) + profileId;
-        await _cacheService.RemoveAsync(nameofCache);
+        string cacheName = Format.ToCacheName(
+            nameof(CacheNames.FINANCIAL_EXPENSE),
+            profileId
+        );
+        await _cacheService.RemoveAsync(cacheName);
 
         if (create.Budget is not 0)
             BudgetCreate(create.Budget, expense.Id);
